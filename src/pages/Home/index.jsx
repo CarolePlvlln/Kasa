@@ -1,8 +1,8 @@
 
-//import { StyledLink } from '../../utils/style/Atoms'
-//echo "# Kasa" >> README.mdimport backgroundHome from '../../assets/backgroundHome.png'
 import React from 'react'
 import backgroundHome from '../../assets/backgroundHome.png'
+//import Card from '../../components/Card'
+import { logementsList } from '../../data/logementsList.js'
 
 
 
@@ -11,12 +11,23 @@ import backgroundHome from '../../assets/backgroundHome.png'
 `*/
 
 function Home() {
-    return (
-      <div>
+
+  return (
+    <div>
         <img src={backgroundHome} alt='img-background-home' className='img-backgroundHome' />
-        <logementsContainer></logementsContainer>
-      </div>
-    )
-  }
+        <div>
+        {logementsList.map(({ id, title, cover,}) =>
+        <div key={id}>
+        <logementList
+          cover={cover}
+          title={title}
+        />
+        </div>
+           )}    
+    </div></div>
+    )}
+        
+        
+
   
   export default Home
