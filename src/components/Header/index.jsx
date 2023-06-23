@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import React from 'react'
+import logo from '../../assets/logo.png'
 
 
 /*const NavContainer = styled.nav`
@@ -14,6 +15,7 @@ function Header() {
 //    <NavContainer>
 
       <div>
+        <img src={logo} alt='logo-kasa' className='logo-header' />
         <Link to="/">Accueil</Link>
         <Link to="/Apropos">A propos</Link>
       </div>

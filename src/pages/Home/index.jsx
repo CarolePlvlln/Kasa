@@ -1,7 +1,8 @@
 
 //import { StyledLink } from '../../utils/style/Atoms'
-//import backgroundHome from '../../assets/backgroundHome.png'
+//echo "# Kasa" >> README.mdimport backgroundHome from '../../assets/backgroundHome.png'
 import React from 'react'
+import backgroundHome from '../../assets/backgroundHome.png'
 
 
 
@@ -12,8 +13,8 @@ import React from 'react'
 function Home() {
     return (
       <div>
-        <h1> Page d'accueil </h1>
-        
+        <img src={backgroundHome} alt='img-background-home' className='img-backgroundHome' />
+        <logementsContainer></logementsContainer>
       </div>
     )
   }
