@@ -1,8 +1,9 @@
 
 .img-backgroundApropos {
-width: 100%;
+width: 93%;
 height: 250px;
 object-fit: cover;
 border-radius: 25px;
 filter: brightness(70%);
+margin-left: 4%;
 }

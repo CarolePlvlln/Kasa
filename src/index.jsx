@@ -10,8 +10,8 @@ import Apropos from './pages/Apropos';
 import Logements from './pages/Logements';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
-//import Footer from './components/Footer';
 import Error from './components/Error';
+import Footer from './components/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,7 +24,8 @@ root.render(
                 <Route path="/Apropos" element={<Apropos />} />
                 <Route path="/*" element={<Error />} />
             </Routes>
-        </Router>
+      <Footer />
+    </Router>
        
   </React.StrictMode>
   
