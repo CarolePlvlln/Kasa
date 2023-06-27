@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+//import styled from 'styled-components'
 import { logementsList } from '../../data/logementsList.js'
 
 function Card() {
@@ -22,5 +24,11 @@ function Card() {
           </div>)
   }
 
+  Card.propTypes = {
+    label: PropTypes.string,
+    title: PropTypes.string,
+    picture: PropTypes.string,
+}
+ 
     
 export default Card

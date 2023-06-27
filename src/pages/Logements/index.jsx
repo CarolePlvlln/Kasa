@@ -1,15 +1,16 @@
 import React from 'react'
 import Card from '../../components/Card'
 import backgroundLogement from '../../assets/backgroundLogement.png'
+import logements from '../../assets/styles/logements.css'
 
 
 function Logements() {
 
   return (
-    <div>
-        <img src={backgroundLogement} alt='img-background-home' className='img-backgroundLogement' />
-    
-                <div></div>
+    <div className='layout-logements' style={logements}>
+        <img src={backgroundLogement} alt='img-background-logements' className='img-backgroundLogements' />
+    <Card></Card>
+                <div>  </div>
                     
         </div>)
 }

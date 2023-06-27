@@ -1,0 +1,20 @@
+.img-backgroundHome {
+width: 92%;
+height: 250px;
+object-fit: cover;
+border-radius: 25px;
+position: absolute;
+z-index: 1;
+filter: brightness(70%);
+}
+
+.homeLayout h1{
+ position: absolute;
+ z-index: 2;
+ color: white; 
+ align-self: center;
+ left: 33%;
+ top: 32%;
+ font-size: 42px;
+ font-weight: 500;
+}

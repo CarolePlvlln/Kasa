@@ -1,0 +1,25 @@
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    }
+
+
+.nav-container li {
+    list-style: none;
+    display: inline;
+    margin-left: 35px;
+    color: #FF6060;
+    text-decoration: none;
+}
+
+.nav-container li :hover{
+    color: #FF6060;
+    text-decoration: none;
+}
+
+link {
+    color: #FF6060;
+}
