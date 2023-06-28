@@ -1,3 +1,7 @@
+// variables
+$coral: #FF6060;
+
+
 .nav-container {
     display: flex;
     flex-direction: row;
@@ -12,15 +16,15 @@
     list-style: none;
     display: inline;
     margin-left: 35px;
-    color: #FF6060;
+    color: $coral;
     text-decoration: none;
 }
 
 .nav-container li :hover{
-    color: #FF6060;
+    color: $coral;
     text-decoration: none;
 }
 
 link {
-    color: #FF6060;
+    color: $coral;
 }

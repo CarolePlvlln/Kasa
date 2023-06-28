@@ -1,33 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 //import styled from 'styled-components'
-import { logementsList } from '../../data/logementsList.js'
+import card from './card.scss'
 
-function Card() {
+
+function Card({id, title, cover}) {
 
     return (
-      <div>
-          {logementsList.map((logement,id) => (
-            
-                  <logementsList
-                      key={`${logement.name}-${id}`}
-                      title={logement.title}
-                      cover={logement.cover}
-                      description={logement.description}
-                      host={logement.host}
-                      //hostProfile={logement.host-${picture}}
-                      rating={logement.rating}
-                      location={logement.location}
-                      equipments={logement.equipments}
-                      />
-              ))}
-          </div>)
+        <div style={card} className='logements'>
+            <p>{title}</p>
+            <img src={cover} alt="" />
+        </div>
+    )
   }
 
   Card.propTypes = {
-    label: PropTypes.string,
+    id: PropTypes.string,
     title: PropTypes.string,
-    picture: PropTypes.string,
+    cover: PropTypes.string,
 }
  
     

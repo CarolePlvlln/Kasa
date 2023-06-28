@@ -1,7 +1,7 @@
 //simport { Link } from 'react-router'
 import React from 'react'
 import backgroundApropos from '../../assets/backgroundApropos.png'
-import apropos from '../../assets/styles/apropos.css'
+import apropos from './apropos.scss'
 
 function Apropos() {
     return (

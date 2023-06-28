@@ -1,0 +1,29 @@
+.homeLayout__logements{
+padding: 1%;
+justify-content: center;
+}
+
+.logements{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1.5%;
+    position: relative;
+}
+
+.logements p{
+    position: absolute;
+    z-index: 2;
+    font-size: 14px;
+    top: 160px;
+    left: 10px;
+}
+
+.logements img{
+    position: relative;
+    z-index: 1;
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+}

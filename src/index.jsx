@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import './assets/styles/index.css';
+import './assets/styles/index.scss';
 import './assets/styles/App.css';
 //import App from './components/'
 import Home from './pages/Home';
@@ -19,7 +19,7 @@ root.render(
     <Router>
       <Header />
       <Routes>
-                <Route path="/Home" element={<Home />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/Logements" element={<Logements />} />
                 <Route path="/Apropos" element={<Apropos />} />
                 <Route path="/*" element={<Error />} />

@@ -1,4 +1,5 @@
-.img-backgroundHome {
+
+.homeLayout__img {
     margin:4%;
     width: 92%;
     height: 250px;
@@ -9,13 +10,25 @@
     filter: brightness(70%);
 }
 
+
 .homeLayout h1{
     position: absolute;
     z-index: 2;
     color: white; 
-    align-self: center;
     left: 33%;
     top: 40%;
     font-size: 42px;
     font-weight: 500;
 }
+
+.homeLayout__logements {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 4%;
+    margin-right: 4%;
+    width: 90%;
+    background-color: rgb(241, 241, 241);
+    border-radius: 10px;
+}
+

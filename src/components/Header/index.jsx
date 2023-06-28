@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import React from 'react'
 import logo from '../../assets/logo.png'
 //import head from '../../assets/styles/head.scss'
-import head from '../../assets/styles/head.css'
+import head from './header.scss'
 
 
 
@@ -19,7 +19,7 @@ function Header() {
 
         <img src={logo} alt='logo-kasa' className='logo-header' />
         <ul>
-          <li><Link to="/Home">Accueil</Link></li>
+          <li><Link to="/">Accueil</Link></li>
           <li><Link to="/Apropos">A propos</Link></li>
         </ul>
         

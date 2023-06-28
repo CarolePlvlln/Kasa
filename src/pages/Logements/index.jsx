@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from '../../components/Card'
 import backgroundLogement from '../../assets/backgroundLogement.png'
-import logements from '../../assets/styles/logements.css'
+import logements from './logements.scss'
 
 
 function Logements() {
