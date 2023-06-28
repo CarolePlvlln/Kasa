@@ -1,3 +1,5 @@
+$coral: #FF6060;
+
 
 .layout__img-background {
 width: 93%;
@@ -18,16 +20,32 @@ margin-left: 4%;
     gap: 20px
 }
 
-.layout__infos--button{
+
+.layout__infos--divBtn{
+.bouton{
     height: 40px;
-    background-color: #FF6060;
+    width: 100%;
+    background-color: $coral;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
-    text-align: left;
+    font-size: 18px;
     padding: 10px;
+    justify-content: space-between;}
+    .icon{
+    align-items: end;
     &:hover{
         cursor: pointer;
+    }}
+
 }
-}
+.collapse{
+    display: block;
+    color: $coral;
+    margin-top: 0px;
+    .p{
+        margin-top: 0px;
+        color: $coral
+    }
+   }
+

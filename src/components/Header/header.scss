@@ -1,7 +1,6 @@
 // variables
 $coral: #FF6060;
 
-
 .nav-container {
     display: flex;
     flex-direction: row;
@@ -20,11 +19,10 @@ $coral: #FF6060;
     text-decoration: none;
 }
 
-.nav-container li :hover{
+a {
     color: $coral;
     text-decoration: none;
-}
-
-link {
-    color: $coral;
+    &:hover{
+        text-decoration: underline;
+    }
 }
