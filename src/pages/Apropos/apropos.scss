@@ -1,9 +1,33 @@
 
-.img-backgroundApropos {
+.layout__img-background {
 width: 93%;
 height: 250px;
 object-fit: cover;
 border-radius: 25px;
 filter: brightness(70%);
 margin-left: 4%;
+}
+
+.layout__infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 25px;
+    gap: 20px
+}
+
+.layout__infos--button{
+    height: 40px;
+    background-color: #FF6060;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: left;
+    padding: 10px;
+    &:hover{
+        cursor: pointer;
+}
 }
