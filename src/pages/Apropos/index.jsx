@@ -25,24 +25,24 @@ function Apropos() {
               <p>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de
               perturbation du voisinage entraînera une exclusion de notre plateforme.</p>
               </div>
-          </div>
+            </div>
 
-          <div className='layout__infos--divBtn'>
-          <button className='bouton'type="button" data-toggle="collapse" href="#collapse3">Service<FontAwesomeIcon icon={faChevronDown} className='icon'/></button>
-          <div class="collapse3 collapse">
-              <p>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de
-              perturbation du voisinage entraînera une exclusion de notre plateforme.</p>
-          </div>
-          </div> 
+            <div className='layout__infos--divBtn'>
+            <button className='bouton'type="button" data-toggle="collapse" href="#collapse3">Service<FontAwesomeIcon icon={faChevronDown} className='icon'/></button>
+            <div class="collapse3 collapse">
+                <p>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de
+                perturbation du voisinage entraînera une exclusion de notre plateforme.</p>
+            </div>
+            </div> 
 
-          <div className='layout__infos--divBtn'>
-          <button className='bouton'type="button" data-toggle="collapse" href="#collapse4">Sécurité<FontAwesomeIcon icon={faChevronDown} className='icon'/></button>
-          <div class="collapse4 collapse">
-              <p>La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement
-              correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au
-              locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons
-              également des ateliers sur la sécurité domestique pour nos hôtes.</p>
-          </div>
+            <div className='layout__infos--divBtn'>
+            <button className='bouton'type="button" data-toggle="collapse" href="#collapse4">Sécurité<FontAwesomeIcon icon={faChevronDown} className='icon'/></button>
+            <div class="collapse4 collapse">
+                <p>La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement
+                correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au
+                locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons
+                également des ateliers sur la sécurité domestique pour nos hôtes.</p>
+            </div>
         </div>
         </div>
      </div>
