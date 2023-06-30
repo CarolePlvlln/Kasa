@@ -7,7 +7,7 @@ import './assets/styles/App.css';
 //import App from './components/'
 import Home from './pages/Home';
 import Apropos from './pages/Apropos';
-import Logements from './pages/Logements';
+import Logement from './pages/Logement';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
 import Error from './components/Error';
@@ -20,7 +20,7 @@ root.render(
       <Header />
       <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/Logements" element={<Logements />} />
+                <Route path="/Logement" element={<Logement />} />
                 <Route path="/Apropos" element={<Apropos />} />
                 <Route path="/*" element={<Error />} />
             </Routes>

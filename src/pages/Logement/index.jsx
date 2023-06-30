@@ -2,7 +2,7 @@ import React from 'react'
 import {useState} from 'react';
 //import Card from '../../components/Card'
 import backgroundLogement from '../../assets/backgroundLogement.png'
-import logements from './logements.scss'
+import logement from './logement.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faStar} from '@fortawesome/free-solid-svg-icons';
 import {faChevronDown} from '@fortawesome/free-solid-svg-icons';
@@ -15,7 +15,7 @@ function Logements() {
     setIsShown(current => !current);
   };
   return (
-    <section className='layout' style={logements}>
+    <section className='layout' style={logement}>
         <img src={backgroundLogement} alt='img-background-logements' className='img-backgroundLogements' />
           <article className='logement'>
           <div className='logement__titreEtAgent'>
@@ -42,14 +42,23 @@ function Logements() {
               </div>
             </div>
             <div className='descriptionEquipements'>
-              <button className='btnScroll' type="button" onClick={handleClick}>Description<FontAwesomeIcon icon={faChevronDown} className='icon'/></button>
+              <div className='btnScroll'>
+                <button className='button' type="button" onClick={handleClick}>Description<FontAwesomeIcon icon={faChevronDown} className='icon'/></button>
+                {isShown ? (
+                <div class="description">
+                <p>Bla Bla</p>
+                </div>
+                ) : null}
+            </div>
+            <div className='btnScroll'>
+              <button className='button' type="button" onClick={handleClick}>Equipements<FontAwesomeIcon icon={faChevronDown} className='icon'/></button>
               {isShown ? (
-              <div class="description">
-              <p>Bla Bla</p>
-              </div>
-            ) : null}
-              <button className='btnScroll' type="button" onClick={handleClick}>Equipements<FontAwesomeIcon icon={faChevronDown} className='icon'/></button>
-          </div>
+                <div class="description">
+                <p>Bla Bla</p>
+                </div>
+                ) : null}
+                </div>
+            </div>
           </article>       
     </section>)
 }
