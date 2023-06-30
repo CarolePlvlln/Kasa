@@ -16,7 +16,7 @@ import {useState} from 'react';
   };
 
   return (
-    <div className='layout' style={apropos}>
+    <section className='layout' style={apropos}>
     
         <img src={backgroundApropos} alt='img-background-a-propos' className='layout__img-background' />
 
@@ -44,7 +44,7 @@ import {useState} from 'react';
           </div>
         
           <div className='layout__infos--divBtn'>
-            <button className='bouton' type="button" onClick={handleClick}>Respect<FontAwesomeIcon icon={faChevronDown} className='icon'/></button>
+            <button className='bouton' type="button" onClick={handleClick}>Service<FontAwesomeIcon icon={faChevronDown} className='icon'/></button>
             {isShown ? (
               <div class="collapse3 collapse">
               <p>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de
@@ -64,7 +64,7 @@ import {useState} from 'react';
             ) : null}
           </div>
       </div>
-   </div>
+   </section>
  )
       
       

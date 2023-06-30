@@ -17,7 +17,7 @@ function Header() {
   return (
   <div className='nav-container' style={head}>
 
-        <img src={logo} alt='logo-kasa' className='logo-header' />
+        <img src={logo} alt='logo-kasa' className='nav-container__logo' />
         <ul>
           <li><Link to="/">Accueil</Link></li>
           <li><Link to="/Apropos">A propos</Link></li>

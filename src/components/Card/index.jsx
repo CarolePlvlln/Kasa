@@ -9,7 +9,10 @@ function Card({id, title, cover}) {
     return (
         <div style={card} className='logements'>
             <p>{title}</p>
-            <img src={cover} alt="" />
+            <img src={cover} alt="" onClick= {(e) => {
+      e.preventDefault();
+      window.location.href='http://localhost:3001/Logements';
+      }}/>
         </div>
     )
   }
