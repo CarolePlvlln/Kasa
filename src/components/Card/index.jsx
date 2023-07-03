@@ -11,7 +11,7 @@ function Card({id, title, cover}) {
             <p>{title}</p>
             <img src={cover} alt="" onClick= {(e) => {
       e.preventDefault();
-      window.location.href='http://localhost:3001/Logements';
+      window.location.href=`http://localhost:3000/Logement?id=${id}`;
       }}/>
         </div>
     )

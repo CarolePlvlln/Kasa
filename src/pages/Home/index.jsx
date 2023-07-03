@@ -18,7 +18,7 @@ function Home() {
         <h1>Chez vous, partout et ailleurs</h1>
         <div className='homeLayout__logements'>
         {logementsList.map(({ id, title, cover}) =>
-        <Card id={id} title={title} cover={cover}/>
+        <Card id={id} key={id} title={title} cover={cover}/>
           
            )}    
         </div>

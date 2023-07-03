@@ -6,9 +6,12 @@ import logement from './logement.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faStar} from '@fortawesome/free-solid-svg-icons';
 import {faChevronDown} from '@fortawesome/free-solid-svg-icons';
-import LogementPage from '../../components/LogementPage';
 
 function Logements() {
+
+  const queryParameters = new URLSearchParams(window.location.search);
+  const id = queryParameters.get("id");
+
   const [isShown, setIsShown] = useState(false);
 
   const handleClick = event => {
@@ -21,7 +24,7 @@ function Logements() {
           <article className='logement'>
           <div className='logement__titreEtAgent'>
             <div className='titreLocalisation'>
-              <h2>Titre Logement</h2>
+              <h2>{id}</h2>
               <h3>Localisation</h3> 
             </div>
             <div className='agent'>
