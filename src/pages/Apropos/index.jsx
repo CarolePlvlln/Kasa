@@ -1,10 +1,11 @@
-//simport { Link } from 'react-router'
+//import { Link } from 'react-router'
 import React, { Component } from 'react'
 import backgroundApropos from '../../assets/backgroundApropos.png'
 import apropos from './apropos.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faChevronDown} from '@fortawesome/free-solid-svg-icons';
 import {faChevronUp} from '@fortawesome/free-solid-svg-icons';
+import {Collapse1, Collapse2, Collapse3, Collapse4} from '../../components/Collapse';
 //import {useState} from 'react';
 
  /*function Apropos() {
@@ -39,10 +40,7 @@ import {faChevronUp} from '@fortawesome/free-solid-svg-icons';
           <div className='layout__infos--divBtn'>
           {this.state.isActive && <button className='bouton' type="button" onClick={this.handleHide}>Fiabilité<FontAwesomeIcon icon={faChevronUp} className='icon'/></button>}
             {this.state.isActive ? (
-              <div class="collapse1 collapse">
-              <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont
-              régulièrement vérifiées par nos équipes.</p>
-              </div>
+              <Collapse1/>
             ) : <button className='bouton' type="button" onClick={this.handleShow}>Fiabilité<FontAwesomeIcon icon={faChevronDown} className='icon'/></button>}
           </div>
         
@@ -50,31 +48,20 @@ import {faChevronUp} from '@fortawesome/free-solid-svg-icons';
           <div className='layout__infos--divBtn'>
           {this.state.isActive && <button className='bouton' type="button" onClick={this.handleHide}>Respect<FontAwesomeIcon icon={faChevronUp} className='icon'/></button>}
             {this.state.isActive ? (
-              <div class="collapse2 collapse">
-              <p>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de
-              perturbation du voisinage entraînera une exclusion de notre plateforme.</p>
-              </div>
+            <Collapse2/>
             ) : <button className='bouton' type="button" onClick={this.handleShow}>Respect<FontAwesomeIcon icon={faChevronDown} className='icon'/></button>}
           </div>
         
           <div className='layout__infos--divBtn'>
           {this.state.isActive && <button className='bouton' type="button" onClick={this.handleHide}>Service<FontAwesomeIcon icon={faChevronUp} className='icon'/></button>}
             {this.state.isActive ? (
-              <div class="collapse3 collapse">
-              <p>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de
-                perturbation du voisinage entraînera une exclusion de notre plateforme.</p>
-              </div>
+              <Collapse3/>
             ) : <button className='bouton' type="button" onClick={this.handleShow}>Service<FontAwesomeIcon icon={faChevronDown} className='icon'/></button>}
           </div>
           <div className='layout__infos--divBtn'>
           {this.state.isActive && <button className='bouton' type="button" onClick={this.handleHide}>Sécurité<FontAwesomeIcon icon={faChevronUp} className='icon'/></button>}
             {this.state.isActive ? (
-              <div class="collapse4 collapse">
-              <p>La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que   pour les voyageurs, chaque logement
-                correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au
-                locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons
-                également des ateliers sur la sécurité domestique pour nos hôtes.</p>
-              </div>
+              <Collapse4/>
             ) : <button className='bouton' type="button" onClick={this.handleShow}>Service<FontAwesomeIcon icon={faChevronDown} className='icon'/></button>}
           </div>
       </div>
