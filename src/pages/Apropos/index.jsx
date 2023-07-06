@@ -1,11 +1,12 @@
 //import { Link } from 'react-router'
-import React, { Component } from 'react'
-import backgroundApropos from '../../assets/backgroundApropos.png'
-import apropos from './apropos.scss'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faChevronDown} from '@fortawesome/free-solid-svg-icons';
-import {faChevronUp} from '@fortawesome/free-solid-svg-icons';
-import {Collapse1, Collapse2, Collapse3, Collapse4} from '../../components/Collapse';
+import React, { Component } from 'react';
+import backgroundApropos from '../../assets/backgroundApropos.png';
+import apropos from './apropos.scss';
+import Collapse from '../../components/Collapse';
+
+
+//library.add(faChevronDown, faChevronUp)
+
 //import {useState} from 'react';
 
  /*function Apropos() {
@@ -31,39 +32,65 @@ import {Collapse1, Collapse2, Collapse3, Collapse4} from '../../components/Colla
     };
     render(){
   return (
-    <section className='layout' style={apropos}>
     
+    <section className='layout' style={apropos}>
+
         <img src={backgroundApropos} alt='img-background-a-propos' className='layout__img-background' />
 
         <div className='layout__infos'>
-
-          <div className='layout__infos--divBtn'>
-          {this.state.isActive && <button className='bouton' type="button" onClick={this.handleHide}>Fiabilité<FontAwesomeIcon icon={faChevronUp} className='icon'/></button>}
+          <div className='collapse'>
+            <Collapse label="Fiabilité">
+              <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont
+              régulièrement vérifiées par nos équipes.</p>
+            </Collapse>
+          </div>
+          <div className='collapse'>
+            <Collapse label="Respect">
+              <p>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de
+              perturbation du voisinage entraînera une exclusion de notre plateforme.</p>
+            </Collapse>
+          </div>
+          <div className='collapse'>
+            <Collapse label="Service">
+            <p>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de
+              perturbation du voisinage entraînera une exclusion de notre plateforme.</p>
+            </Collapse>
+          </div>
+          <div className='collapse'>
+            <Collapse label="Sécurité">
+              <p>La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement
+              correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au
+              locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons
+              également des ateliers sur la sécurité domestique pour nos hôtes.</p>
+            </Collapse>
+          </div>
+          {/*<div className='layout__infos--divBtn'>
+          {this.state.isActive && <button className='bouton' type="button" onClick={this.handleHide}>Fiabilité<img src={arrow_up} alt="icon_arrow-up" className='arrow_up'/></button>}
             {this.state.isActive ? (
               <Collapse1/>
-            ) : <button className='bouton' type="button" onClick={this.handleShow}>Fiabilité<FontAwesomeIcon icon={faChevronDown} className='icon'/></button>}
+            ) : <button className='bouton' type="button" onClick={this.handleShow}>Fiabilité<img src={arrow_down} alt="icon_arrow-down" className='arrow_down'/></button>}
           </div>
         
 
           <div className='layout__infos--divBtn'>
-          {this.state.isActive && <button className='bouton' type="button" onClick={this.handleHide}>Respect<FontAwesomeIcon icon={faChevronUp} className='icon'/></button>}
+          {this.state.isActive && <button className='bouton' type="button" onClick={this.handleHide}>Respect<img src={arrow_up} alt="icon_arrow-up" className='arrow_up'/></button>}
             {this.state.isActive ? (
             <Collapse2/>
-            ) : <button className='bouton' type="button" onClick={this.handleShow}>Respect<FontAwesomeIcon icon={faChevronDown} className='icon'/></button>}
+            ) : <button className='bouton' type="button" onClick={this.handleShow}>Respect<img src={arrow_down} alt="icon_arrow-down" className='arrow_down'/></button>}
           </div>
         
           <div className='layout__infos--divBtn'>
-          {this.state.isActive && <button className='bouton' type="button" onClick={this.handleHide}>Service<FontAwesomeIcon icon={faChevronUp} className='icon'/></button>}
+          {this.state.isActive && <button className='bouton' type="button" onClick={this.handleHide}>Service<img src={arrow_up} alt="icon_arrow-up" className='arrow_up'/></button>}
             {this.state.isActive ? (
               <Collapse3/>
-            ) : <button className='bouton' type="button" onClick={this.handleShow}>Service<FontAwesomeIcon icon={faChevronDown} className='icon'/></button>}
+            ) : <button className='bouton' type="button" onClick={this.handleShow}>Service<img src={arrow_down} alt="icon_arrow-down" className='arrow_down'/></button>}
           </div>
           <div className='layout__infos--divBtn'>
-          {this.state.isActive && <button className='bouton' type="button" onClick={this.handleHide}>Sécurité<FontAwesomeIcon icon={faChevronUp} className='icon'/></button>}
+          {this.state.isActive && <button className='bouton' type="button" onClick={this.handleHide}>Sécurité<img src={arrow_up} alt="icon_arrow-up" className='arrow_up'/></button>}
             {this.state.isActive ? (
               <Collapse4/>
-            ) : <button className='bouton' type="button" onClick={this.handleShow}>Service<FontAwesomeIcon icon={faChevronDown} className='icon'/></button>}
-          </div>
+            ) : <button className='bouton' type="button" onClick={this.handleShow}>Service<img src={arrow_down} alt="icon_arrow-down" className='arrow_down'/></button>}
+            </div>*/}
       </div>
    </section>
  )

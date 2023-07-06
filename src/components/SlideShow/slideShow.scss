@@ -1,0 +1,45 @@
+.carousel {
+    overflow: hidden;
+}
+
+.inner{
+    white-space: nowrap;
+    transition: transfrom 0.3;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.carousel-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width:100%; 
+}
+
+.indicators {
+    width:100%;
+    display: flex;       
+    position: absolute;
+    z-index: 2;
+    top: 400px;
+    margin-left:4%;
+    margin-right:4%;
+    
+    button {
+        background-color: transparent;
+        border: none; 
+        size: 50px;
+        cursor: pointer;
+        margin:0px;
+    }
+
+    .btnBack{
+        margin-left: 0px;
+    }
+
+    .btnForward{
+        margin-right: 0px;
+    }
+}

@@ -1,15 +1,14 @@
 import React from 'react'
-import {useState} from 'react';
-//import logementList from '../../data';
-//import Card from '../../components/Card'
-import backgroundLogement from '../../assets/backgroundLogement.png'
 import logement from './logement.scss'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faStar} from '@fortawesome/free-solid-svg-icons';
-import {faChevronDown} from '@fortawesome/free-solid-svg-icons';
+import {Carousel, CarouselItem} from '../../components/SlideShow';
+import arrow_down from '../../assets/icons/arrow_down.png';
+//import arrow_up from '../../icons/assets/arrow_up.png';
+import star_active from '../../assets/icons/star_active.png';
+//import star_inactive from '../../assets/icons/star_inactive.png';
 //The useParams hook returns an object of key/value pairs of the dynamic params from the current URL that were matched by the <Route path>. Child routes inherit all params from their parent routes.
 import { useParams } from 'react-router-dom';
-import logementsList from '../../data/logementsList.json'
+import logementsList from '../../data/logementsList.json';
+import Collapse from '../../components/Collapse'
 
 
 function Logement () {
@@ -25,65 +24,68 @@ function Logement () {
   }
   }
     
+
   //vérifer si ID = ID logement cliqué fonction filter ? ou reduce
   
-  const [isShown, setIsShown] = useState(false);
+  /*const [isShown, setIsShown] = useState(false);
 
   const handleClick = event => {
   // visibilité
     setIsShown(current => !current);
-  };
+  };*/
   
   return (
           <section className='layout' style={logement}>
-          <img src={backgroundLogement} alt='img-background-logements' className='img-backgroundLogements' />
-            <article className='logement'>
-            <div className='logement__titreEtAgent'>
-              <div className='titreLocalisation'>
-                <h2>{logementFiltre.title}</h2>
-                <h3>{logementFiltre.location}</h3> 
-              </div>
-              <div className='agent'>
-                <h3>{logementFiltre.host.name}</h3>
-                <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-4.jpg" alt='portrait-agent' /> 
-              </div>
-            </div> 
-              <div className='logement__btnIcon'>
-              <div className='btn'>
-                {/*parcourir tag de logementFiltre. Retourne chaque tag dans un bouton*/}
-                {logementFiltre.tags.map(tag=>{
-                  return(<button key={tag}>{tag}</button>)
+          <div className='slideShow'>
+          <Carousel>
+            {logementFiltre.pictures.map(picture=>{
+                  return(<CarouselItem key={picture}><img src={picture} alt="photos carousel" className='picture'/></CarouselItem>)
                 })}
-              </div>
-              <div className='iconStar'>
-              <FontAwesomeIcon icon={faStar} className='star'/> 
-              <FontAwesomeIcon icon={faStar} className='star'/>
-              <FontAwesomeIcon icon={faStar} className='star'/>
-              <FontAwesomeIcon icon={faStar} className='star'/>           
-              </div>
-            </div>
-            <div className='descriptionEquipements'>
-              <div className='btnScroll'>
-
-                {/*Apeler composant Collapse*/}
-                <button className='button' type="button" onClick={handleClick}>Description<FontAwesomeIcon icon={faChevronDown} className='icon'/></button>
-                {isShown ? (
-                <div className="description collapse">
-                <p>Description</p>
+          </Carousel>
+        </div>
+            <article className='logement'>
+              <div className='logement__titreEtAgent'>
+                <div className='titreLocalisation'>
+                  <h2>{logementFiltre.title}</h2>
+                  <h3>{logementFiltre.location}</h3> 
                 </div>
-                ) : null}
-            </div>
-            <div className='btnScroll'>
-              <button className='button' type="button" onClick={handleClick}>Equipements<FontAwesomeIcon icon={faChevronDown} className='icon'/></button>
-              {isShown ? (
-              <div className="equipement collapse">
-              <p>Equipements</p>
+                <div className='agent'>
+                  <h3>{logementFiltre.host.name}</h3>
+                  <img src={logementFiltre.host.picture} alt='portrait-agent' /> 
+                </div>
+              </div> 
+              <div className='logement__btnIcon'>
+                <div className='btn'>
+                  {/*parcourir tag de logementFiltre. Retourne chaque tag dans un bouton*/}
+                  {logementFiltre.tags.map(tag=>{
+                    return(<button key={tag}>{tag}</button>)
+                  })}
+                </div>
+                <div className='iconStar'>
+                  <img src={star_active} alt="icon_arrow-down" className='iconStar'/> 
+                  <img src={star_active} alt="icon_arrow-down" className='iconStar'/> 
+                  <img src={star_active} alt="icon_arrow-down" className='iconStar'/> 
+                  <img src={star_active} alt="icon_arrow-down" className='iconStar'/>       
+                </div>
               </div>
-              ) : null}
-              </div>
-            </div>
+              <div className='descriptionEquipements'>
+                <div className='btnScroll'>
+                  <div className='collapse'>
+                    <Collapse label="Description">
+                      <p>{logementFiltre.description}</p>
+                    </Collapse>
+                  </div>
+                  <div className='collapse'>
+                    <Collapse label="Equipements">
+                      <p>{logementFiltre.equipments}</p>
+                    </Collapse>
+                  </div>
+                  </div>
+                </div>
+              
           </article>    
-    </section>)
+    </section>
+    )
 }
 
 export default Logement
