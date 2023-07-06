@@ -36,12 +36,15 @@ export const Carousel = ({children}) => {
     </div>
     {/*Implémenter prev et next button */}
     <div className="indicators">
-    <button className="btnBack" onClick={() => { 
-        updateIndex(activeIndex - 1)
-    }}><img src={arrow_back} alt="icon-back icon"/></button>
-    <button className="btnForward" onClick={() => { 
-        updateIndex(activeIndex + 1)
-    }}><img src={arrow_forward} alt="icon-forward icon"/></button>
+        <div className="btnIconBack">
+        <button className="btnBack" onClick={() => { 
+            updateIndex(activeIndex - 1)
+        }}><img src={arrow_back} alt="icon-back icon"/></button>
+    </div>
+    <div className="btnIconForward"></div>
+        <button className="btnForward" onClick={() => { 
+            updateIndex(activeIndex + 1)
+        }}><img src={arrow_forward} alt="icon-forward icon"/></button>
     </div>
     </div>
     )

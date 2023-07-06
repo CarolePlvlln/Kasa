@@ -19,8 +19,10 @@
 }
 
 .indicators {
-    width:100%;
-    display: flex;       
+    width:90%;
+    display: flex;  
+    flex-direction: row;   
+    justify-content: space-between;
     position: absolute;
     z-index: 2;
     top: 400px;
@@ -35,11 +37,8 @@
         margin:0px;
     }
 
-    .btnBack{
+    .btnIconBack{
         margin-left: 0px;
     }
 
-    .btnForward{
-        margin-right: 0px;
-    }
 }
