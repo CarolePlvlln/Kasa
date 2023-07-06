@@ -7,6 +7,10 @@
     position: relative;
     z-index: 1;
     filter: brightness(70%);
+    @media (max-width: 544px) {
+
+        
+    }
 }
 
 
@@ -15,9 +19,15 @@
     z-index: 2;
     color: white; 
     left: 33%;
-    top: 300px;
-    font-size: 42px;
+    top: 200px;
+    font-size: 22px;
     font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: 544px) {
+        left: 20%;
+        inline-size: 65%;
+    }
 }
 
 .homeLayout__logements {
@@ -29,5 +39,12 @@
     width: 90%;
     background-color: rgb(241, 241, 241);
     border-radius: 10px;
+
+    @media (max-width: 544px) {
+        margin-left: 0%;
+        margin-right: 0%;
+        width: 100%;
+        background-color: transparent;
+    }
 }
 
