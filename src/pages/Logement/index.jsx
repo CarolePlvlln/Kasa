@@ -58,7 +58,7 @@ function Logement () {
                 <div className='agentRating'>
                   <div className='agent'>
                     <h3>{logementFiltre.host.name}</h3>
-                    <img src={logementFiltre.host.picture} alt='portrait-agent' /> 
+                    <img src={logementFiltre.host.picture} alt='portrait-agent' className='imgAgent'/> 
                   </div>
                   <div className='rating'>
                     <img src={star_active} alt="icon_arrow-down" className='iconStar'/> 

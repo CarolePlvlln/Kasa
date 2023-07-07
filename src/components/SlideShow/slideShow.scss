@@ -16,6 +16,12 @@
     justify-content: center;
     height: 500px;
     width:100%; 
+    @media (max-width: 450px){
+        height: 300px;
+    }
+    @media (max-width: 850px){
+        height: 400px;
+    }
 }
 
 .indicators {
@@ -28,6 +34,12 @@
     top: 400px;
     margin-left:4%;
     margin-right:4%;
+    @media (max-width: 900px){
+        top: 300px;
+    }
+    @media (max-width: 450px){
+        top: 210px;
+    }
     
     button {
         background-color: transparent;
@@ -35,6 +47,16 @@
         size: 50px;
         cursor: pointer;
         margin:0px;
+        .icon{
+            height:100px;
+            @media (max-width: 850px){
+                height:70px;
+            }
+            @media (max-width: 450px){
+                height:55px;
+            }
+        }
+
     }
 
     .btnIconBack{

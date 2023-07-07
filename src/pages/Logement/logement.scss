@@ -22,7 +22,12 @@ h1, h2, h3, p{
     height: 500px;
     border-radius: 25px;
     object-fit: cover;
-
+    @media (max-width: 450px){
+        height: 250px;
+    }
+    @media (max-width: 850px){
+        height: 400px;
+    }
 }
 
 
@@ -92,7 +97,7 @@ h1, h2, h3, p{
     flex-direction: row;
     vertical-align: middle;
 }
-        img{
+        .imgAgent{
             margin-left:5px;
             border-radius: 50%;
             object-fit: cover;

@@ -5,8 +5,10 @@ import footer from './footer.scss'
 function Footer() {
     return (
     <div className='footer' style={footer}>
-          <img src={logo} alt='logo-kasa' className='footer__logo' />
+      <div className='footer__logo'>
+          <img src={logo} alt='logo-kasa' className='logo' />
           <p> 2020 Kasa. All rights reserved</p>
+      </div>
     </div>
   
     )
