@@ -1,6 +1,14 @@
 // variables
 $coral: #FF6060;
 
+img {
+    border-radius: 0px;
+    @media (max-width: 450px){
+        height: 30px;
+        margin-top: 10px;
+    }
+}
+
 .nav-container {
     display: flex;
     flex-direction: row;
@@ -17,12 +25,19 @@ $coral: #FF6060;
     margin-left: 35px;
     color: $coral;
     text-decoration: none;
+    @media (max-width: 450px){
+        margin-left: 15px;
+        margin-top: auto;
+    }
 }
 
 a {
     color: $coral;
     text-decoration: none;
     font-size: 18px;
+    @media (max-width: 450px){
+        font-size: 14px;
+    }
     &:hover{
         text-decoration: underline;
     }
