@@ -1,6 +1,9 @@
 .homeLayout__logements{
 padding: 1%;
 justify-content: center;
+    @media (min-width: 600px) and (max-width: 840px) {
+    column-gap: 4%;
+    }
 }
 
 .logements{
@@ -9,6 +12,7 @@ justify-content: center;
     flex-wrap: wrap;
     margin: 1.5%;
     position: relative;
+
     @media (max-width: 544px) {
         margin: 2%;
     }
@@ -20,11 +24,18 @@ justify-content: center;
     font-size: 14px;
     top: 170px;
     left: 10px;
-    width: 50%;
-    color: white;
+    width: 70%;
+    color: white;    
+    @media (max-width: 1500px) {
+        top: 70%;
+    }
+    @media (max-width: 1000px) {
+        top: 75%;
+    }
     @media (max-width: 544px) {
         top: 80%;
     }
+
 }
 
 .logements img{

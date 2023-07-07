@@ -1,8 +1,6 @@
 import React from 'react'
 import logement from './logement.scss'
 import {Carousel, CarouselItem} from '../../components/SlideShow';
-import arrow_down from '../../assets/icons/arrow_down.png';
-//import arrow_up from '../../icons/assets/arrow_up.png';
 import star_active from '../../assets/icons/star_active.png';
 //import star_inactive from '../../assets/icons/star_inactive.png';
 //The useParams hook returns an object of key/value pairs of the dynamic params from the current URL that were matched by the <Route path>. Child routes inherit all params from their parent routes.
@@ -18,7 +16,7 @@ function Logement () {
  let logementFiltre
  //boucle for pour parcourir logement et comparer ID 
   for (let i=0; i<logementsList.length; i++) {
-    if (logementsList[i].id==params.id){
+    if (logementsList[i].id===params.id){
       //logementFiltre=logement avec id=
       logementFiltre=logementsList[i]
   }
