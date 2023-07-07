@@ -43,27 +43,29 @@ function Logement () {
         </div>
             <article className='logement'>
               <div className='logement__titreEtAgent'>
-                <div className='titreLocalisation'>
-                  <h2>{logementFiltre.title}</h2>
-                  <h3>{logementFiltre.location}</h3> 
-                </div>
-                <div className='agent'>
-                  <h3>{logementFiltre.host.name}</h3>
-                  <img src={logementFiltre.host.picture} alt='portrait-agent' /> 
-                </div>
-              </div> 
-              <div className='logement__btnIcon'>
-                <div className='btn'>
-                  {/*parcourir tag de logementFiltre. Retourne chaque tag dans un bouton*/}
-                  {logementFiltre.tags.map(tag=>{
-                    return(<button key={tag}>{tag}</button>)
-                  })}
-                </div>
-                <div className='iconStar'>
-                  <img src={star_active} alt="icon_arrow-down" className='iconStar'/> 
-                  <img src={star_active} alt="icon_arrow-down" className='iconStar'/> 
-                  <img src={star_active} alt="icon_arrow-down" className='iconStar'/> 
-                  <img src={star_active} alt="icon_arrow-down" className='iconStar'/>       
+                <div className='TitreEtAgent'>
+                  <div className='titreLocalisation'>
+                    <h2>{logementFiltre.title}</h2>
+                    <h3>{logementFiltre.location}</h3> 
+                  </div>
+                  <div className='tags'>
+                    {/*parcourir tag de logementFiltre. Retourne chaque tag dans un bouton*/}
+                    {logementFiltre.tags.map(tag=>{
+                      return(<button key={tag}>{tag}</button>)
+                    })}
+                  </div>
+                </div> 
+                <div className='agentRating'>
+                  <div className='agent'>
+                    <h3>{logementFiltre.host.name}</h3>
+                    <img src={logementFiltre.host.picture} alt='portrait-agent' /> 
+                  </div>
+                  <div className='rating'>
+                    <img src={star_active} alt="icon_arrow-down" className='iconStar'/> 
+                    <img src={star_active} alt="icon_arrow-down" className='iconStar'/> 
+                    <img src={star_active} alt="icon_arrow-down" className='iconStar'/> 
+                    <img src={star_active} alt="icon_arrow-down" className='iconStar'/>       
+                  </div>
                 </div>
               </div>
               <div className='descriptionEquipements'>
