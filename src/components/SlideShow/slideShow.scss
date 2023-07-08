@@ -7,6 +7,10 @@
     transition: transfrom 0.3;
     position: relative;
     z-index: 1;
+    //transition-duration: 1s; 
+    //transition-timing-function: ease-in; 
+    //transition-delay: .4s ;
+    transition: 1s ease-in .4s 
     
 }
 
