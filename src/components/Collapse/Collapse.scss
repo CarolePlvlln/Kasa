@@ -14,18 +14,24 @@ $coral: #FF6060;
             justify-content: space-between;
             cursor: pointer;
             padding: 10px;
+            transition:box-shadow 0.2s ease-out;
         }
         .arrow_up{
             height: 22px;
             color: white;
             align-self:flex-end;
         } 
-        .content-parent {
-            height: 0px;
-            overflow: hidden;
-            transition: height ease 0.9s;
-        .content{
-            overflow: hidden;
-            transition: height 200ms;
-        }}  
+        .fade {
+            opacity: 1;
+            background-color:#f5dcdc;
+            overflow:hidden;
+            transition: transform 0.4s ease-in-out;
+            height:auto;
+        }
+
+        .fade.out{
+            opacity: 0;
+        
+        }
+ 
 }

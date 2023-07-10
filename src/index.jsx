@@ -1,35 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import './assets/styles/index.scss';
-import './assets/styles/App.css';
+import "./assets/styles/index.scss";
+import "./assets/styles/App.css";
 //import App from './components/'
-import Home from './pages/Home';
-import Apropos from './pages/Apropos';
-import Logement from './pages/Logement';
-import reportWebVitals from './reportWebVitals';
-import Header from './components/Header';
-import Error from './components/Error';
-import Footer from './components/Footer';
+import Home from "./pages/Home";
+import Apropos from "./pages/Apropos";
+import Logement from "./pages/Logement";
+import reportWebVitals from "./reportWebVitals";
+import Header from "./components/Header";
+import Error from "./components/Error";
+import Footer from "./components/Footer";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
       <Header />
       <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/Logement/:id" element={<Logement />} />
-                <Route path="/Apropos" element={<Apropos />} />
-                <Route path="/*" element={<Error />} />
-            </Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Logement/:id" element={<Logement />} />
+        <Route path="/Apropos" element={<Apropos />} />
+        <Route path="/*" element={<Error />} />
+      </Routes>
       <Footer />
     </Router>
-       
   </React.StrictMode>
-  
 );
 
 // If you want to start measuring performance in your app, pass a function
