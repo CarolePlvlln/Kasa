@@ -58,26 +58,12 @@ function Logement() {
               />
             </div>
             <div className="rating">
-              <img
+              {/*Tableau pour afficher le nombre d'étoile en icônes étoiles corail */}
+              {Array(+logementFiltre.rating).fill('').map(x=><img
                 src={star_active}
-                alt="icon_arrow-down"
-                className="iconStar"
-              />
-              <img
-                src={star_active}
-                alt="icon_arrow-down"
-                className="iconStar"
-              />
-              <img
-                src={star_active}
-                alt="icon_arrow-down"
-                className="iconStar"
-              />
-              <img
-                src={star_active}
-                alt="icon_arrow-down"
-                className="iconStar"
-              />
+                alt="icon_star_coral"
+                className="iconStarCoral"
+              />)}
             </div>
           </div>
         </div>
