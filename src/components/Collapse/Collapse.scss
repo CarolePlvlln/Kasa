@@ -5,6 +5,8 @@ $coral: #FF6060;
     flex-direction: column;
     justify-content: space-between; 
         button{
+            font-size: 14px;
+            font-weight: 400;
             background-color: $coral;
             color: white;
             border: none;
@@ -31,10 +33,13 @@ $coral: #FF6060;
             overflow-y: auto;
         }
         .content.open{
-            height:100px;
+            height:150px;
             display: block;
+            scrollbar-width: none;
         }
         .content.close{
             height:0;
+            scrollbar-width: none;
         }
+       
 }

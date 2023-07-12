@@ -31,6 +31,7 @@ export const Carousel = ({ children }) => {
   useEffect(() => {
     let timer = setInterval(() => {
       clearInterval();
+      //loop
         setActiveIndex((activeIndex)=>(activeIndex + 1)% children.length);
     }, 4000);
     return () => clearInterval(timer);
