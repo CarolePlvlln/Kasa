@@ -29,12 +29,13 @@ export const Carousel = ({ children }) => {
 
   //Diaporama slider (timer). Utilisation du hook "useEffect" qui sera appelé au premier affichage et chaque mise à jour..
   useEffect(() => {
-    let slider = setInterval(() => {
+    let timer = setInterval(() => {
       clearInterval();
-        setActiveIndex(activeIndex + 1);
+        setActiveIndex((activeIndex)=>(activeIndex + 1)% children.length);
     }, 4000);
-    return () => clearInterval(slider);
+    return () => clearInterval(timer);
   }, [activeIndex]);
+  
 
   return (
     <div className="carousel">
@@ -73,3 +74,5 @@ export const Carousel = ({ children }) => {
     </div>
   );
 };
+
+

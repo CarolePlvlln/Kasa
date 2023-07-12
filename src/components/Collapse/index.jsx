@@ -6,9 +6,8 @@ import "../../pages/Apropos";
 
 const Collapse = (props) => {
   const [open, setOPen] = useState(false);
-  let classOpen = open?'open':'close'
-  // const contentRef = useRef();
-  //if(contentRef.current) console.log(contentRef.current)
+  let classOpen = open ? "open" : "close";
+
   const toggle = () => {
     setOPen(!open);
   };
@@ -18,11 +17,14 @@ const Collapse = (props) => {
       {/*On utilise les props pour afficher celui du label dans le fichier index.jsx logement(ou apropos).jsx*/}
       <button onClick={toggle}>
         {props.label}
-        <img src={arrow_down} alt="icon_arrow-down" className={`arrow-up ${classOpen}`} />
+        <img
+          src={arrow_down}
+          alt="icon_arrow-down"
+          className={`arrow-up ${classOpen}`}
+        />
       </button>
-      
-          <div className={`content ${classOpen}`} >{props.children}</div>
-
+      {/*Ajout "classOpen pour animation scss*/}
+      <div className={`content ${classOpen}`}>{props.children}</div>
     </div>
   );
 };
