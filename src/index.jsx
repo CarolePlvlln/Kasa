@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./assets/styles/index.scss";
 import "./assets/styles/App.css";
-//import App from './components/'
 import Home from "./pages/Home";
 import Apropos from "./pages/Apropos";
 import Logement from "./pages/Logement";
@@ -17,10 +16,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -3,7 +3,7 @@ import "./slideShow.scss";
 import arrow_forward from "../../assets/icons/arrow_forward.png";
 import arrow_back from "../../assets/icons/arrow_back.png";
 
-//will render the item itself. We just need to pass the width property to this component for now
+//Rendra l'élément lui-même. On passe juste la propriété width au composant pour l'instant
 export const CarouselItem = ({ children, width }) => {
   return (
     <div className="carousel-item" style={{ width: width }}>
@@ -21,14 +21,16 @@ export const Carousel = ({ children }) => {
     if (newIndex < 0) {
       newIndex = 0;
     } else if (newIndex >= React.Children.count(children)) {
+      console.log(React.Children.count(children))
       newIndex = React.Children.count(children) - 1;
     }
     setActiveIndex(newIndex);
   };
 
-  //Diaporama slider
+  //Diaporama slider (timer). Utilisation du hook "useEffect" qui sera appelé au premier affichage et chaque mise à jour..
   useEffect(() => {
     let slider = setInterval(() => {
+      clearInterval();
         setActiveIndex(activeIndex + 1);
     }, 4000);
     return () => clearInterval(slider);
@@ -36,14 +38,14 @@ export const Carousel = ({ children }) => {
 
   return (
     <div className="carousel">
-      {/*control the active item by using the transform: translateX for the Div.Inner*/}
+      {/*controle l'item active en utilisant transform: translateX pour Div.Inner*/}
       <div
         className="inner"
         //transition de l'image à l'horizontale
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
         {React.Children.map(children, (child, index) => {
-          return React.cloneElement(child, { widht: "100%" });
+          return React.cloneElement(child, { width: "100%" });
         })}
       </div>
       {/*Implémenter prev et next button */}

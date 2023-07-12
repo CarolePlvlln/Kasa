@@ -1,67 +1,70 @@
 //import { Link } from 'react-router'
-import React, { Component } from 'react';
-import backgroundApropos from '../../assets/backgroundApropos.png';
-import apropos from './apropos.scss';
-import Collapse from '../../components/Collapse';
+import React, { Component } from "react";
+import backgroundApropos from "../../assets/backgroundApropos.png";
+import apropos from "./apropos.scss";
+import Collapse from "../../components/Collapse";
 
 
-//library.add(faChevronDown, faChevronUp)
+class Apropos extends Component {
+  state = {
+    isActive: false,
+  };
 
-//import {useState} from 'react';
+  handleShow = () => {
+    this.setState({ isActive: true });
+  };
 
- /*function Apropos() {
-  const [isShown, setIsShown] = useState(false);
+  handleHide = () => {
+    this.setState({ isActive: false });
+  };
+  render() {
+    return (
+      <section className="layout" style={apropos}>
+        <img
+          src={backgroundApropos}
+          alt="img-background-a-propos"
+          className="layout__img-background"
+        />
 
-  const handleClick = event => {
-    //visibility
-    setIsShown(current => !current);
-    
-  };*/
-
-  class Apropos extends Component{
-    state = {
-      isActive: false
-    };
-  
-    handleShow = () => {
-      this.setState({isActive: true});
-    };
-  
-    handleHide = () => {
-      this.setState({isActive: false});
-    };
-    render(){
-  return (
-    
-    <section className='layout' style={apropos}>
-
-        <img src={backgroundApropos} alt='img-background-a-propos' className='layout__img-background' />
-
-        <div className='layout__infos'>
-          <div className='collapse'>
+        <div className="layout__infos">
+          <div className="collapse">
             <Collapse label="Fiabilité">
-              <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont
-              régulièrement vérifiées par nos équipes.</p>
+              <p>
+                Les annonces postées sur Kasa garantissent une fiabilité totale.
+                Les photos sont conformes aux logements, et toutes les
+                informations sont régulièrement vérifiées par nos équipes.
+              </p>
             </Collapse>
           </div>
-          <div className='collapse'>
+          <div className="collapse">
             <Collapse label="Respect">
-              <p>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de
-              perturbation du voisinage entraînera une exclusion de notre plateforme.</p>
+              <p>
+                La bienveillance fait partie des valeurs fondatrices de Kasa.
+                Tout comportement discriminatoire ou de perturbation du
+                voisinage entraînera une exclusion de notre plateforme.
+              </p>
             </Collapse>
           </div>
-          <div className='collapse'>
+          <div className="collapse">
             <Collapse label="Service">
-            <p>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de
-              perturbation du voisinage entraînera une exclusion de notre plateforme.</p>
+              <p>
+                La bienveillance fait partie des valeurs fondatrices de Kasa.
+                Tout comportement discriminatoire ou de perturbation du
+                voisinage entraînera une exclusion de notre plateforme.
+              </p>
             </Collapse>
           </div>
-          <div className='collapse'>
+          <div className="collapse">
             <Collapse label="Sécurité">
-              <p>La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement
-              correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au
-              locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons
-              également des ateliers sur la sécurité domestique pour nos hôtes.</p>
+              <p>
+                La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes
+                que pour les voyageurs, chaque logement correspond aux critères
+                de sécurité établis par nos services. En laissant une note aussi
+                bien à l'hôte qu'au locataire, cela permet à nos équipes de
+                vérifier que les standards sont bien respectés. Nous organisons
+                également des ateliers sur la sécurité domestique pour nos
+                hôtes.
+              </p>
             </Collapse>
           </div>
           {/*<div className='layout__infos--divBtn'>
@@ -91,23 +94,15 @@ import Collapse from '../../components/Collapse';
               <Collapse4/>
             ) : <button className='bouton' type="button" onClick={this.handleShow}>Service<img src={arrow_down} alt="icon_arrow-down" className='arrow_down'/></button>}
             </div>*/}
-      </div>
-   </section>
- )
-      
-}   
+        </div>
+      </section>
+    );
+  }
 }
 
-  export default Apropos
-     
+export default Apropos;
 
-
-
-
-
-
-
-   /* return (
+/* return (
       <div className='layout' style={apropos}>
         <img src={backgroundApropos} alt='img-background-a-propos' className='layout__img-background' />
 

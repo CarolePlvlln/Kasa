@@ -16,22 +16,25 @@ $coral: #FF6060;
             padding: 10px;
             transition:box-shadow 0.2s ease-out;
         }
-        .arrow_up{
+        .arrow-up{
+            transition: 1s transform;
             height: 22px;
             color: white;
             align-self:flex-end;
         } 
-        .fade {
-            opacity: 1;
-            background-color:#f5dcdc;
-            overflow:hidden;
-            transition: transform 0.4s ease-in-out;
-            height:auto;
+        .arrow-up.open{
+            transform: rotate(-180deg)
+        } 
+        .content{
+            transition: 1s height;
+            height:0;
+            overflow-y: auto;
         }
-
-        .fade.out{
-            opacity: 0;
-        
+        .content.open{
+            height:100px;
+            display: block;
         }
- 
+        .content.close{
+            height:0;
+        }
 }

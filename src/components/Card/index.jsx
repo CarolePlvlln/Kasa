@@ -1,30 +1,32 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-//import styled from 'styled-components'
-import card from './card.scss'
-import { useNavigate } from 'react-router-dom'
+import React from "react";
+import PropTypes from "prop-types";
+import card from "./card.scss";
+import { useNavigate } from "react-router-dom";
 
-/*useNavigation is a hook which gives access to navigation object. It's useful when you cannot pass the navigation prop into the component directly, or don't want to pass it in case of a deeply nested child.
-useNavigation() returns the navigation prop of the screen it's inside.*/
+/*useNavigation: hook qui donne accès à l'objet de navigation. Utile lorsqu'on' ne peut pas passer directement la prop de navigation dans le composant ou qu'on'ne veut pas le passer dans le cas d'un enfant profondément imbriqué.
+useNavigation() renvoie la prop de navigation de l'écran dans lequel il se trouve.*/
 
-function Card({id, title, cover}) {
-const navigate= useNavigate()
+function Card({ id, title, cover }) {
+  const navigate = useNavigate();
 
-    return (
-        <div style={card} className='logements'>
-            <p>{title}</p>
-            <img src={cover} alt="" onClick= {(e) => {
-      navigate(`/Logement/${id}`)
-      }}/>
-        </div>
-    )
-  }
-
-  Card.propTypes = {
-    id: PropTypes.string,
-    title: PropTypes.string,
-    cover: PropTypes.string,
+  return (
+    <div style={card} className="logements">
+      <p>{title}</p>
+      <img
+        src={cover}
+        alt=""
+        onClick={(e) => {
+          navigate(`/Logement/${id}`);
+        }}
+      />
+    </div>
+  );
 }
- 
-    
-export default Card
+
+Card.propTypes = {
+  id: PropTypes.string,
+  title: PropTypes.string,
+  cover: PropTypes.string,
+};
+
+export default Card;
