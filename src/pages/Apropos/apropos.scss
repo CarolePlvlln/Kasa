@@ -17,43 +17,51 @@ margin-left: 4%;
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 25px;
-    gap: 20px
+    gap: 20px;
+    @media (max-width: 800px) {
+        margin-left:10%;
+        margin-right: 10%;
+    }
+    @media (max-width: 544px) {
+        margin-left:4%;
+        margin-right: 4%;
+    }
 }
 
 
 .layout__infos--divBtn{
-.bouton{
-    height: 40px;
-    width: 100%;
-    background-color: $coral;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    padding: 10px;
-    justify-content: space-between;}
-    .icon{
-    margin-left:90%;
-     @media (max-width: 1200px) {
-        margin-left:80%;
-    }
-    @media (max-width: 650px) {
-        margin-left:70%;
-    }
-    @media (max-width: 410px) {
-        margin-left:60%;
-    }
-    &:hover{
-        cursor: pointer;
-    }
     
-    
+    .bouton{
+        height: 40px;
+        width: 100%;
+        background-color: $coral;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        padding: 10px;
+        justify-content: space-between;
+    }
+        .icon{
+        margin-left:90%;
+        @media (max-width: 1200px) {
+            margin-left:80%;
         }
+        @media (max-width: 650px) {
+            margin-left:70%;
+        }
+        @media (max-width: 410px) {
+            margin-left:60%;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+
+        
+            }
 
 
 }
 
-
-   //test
 
 

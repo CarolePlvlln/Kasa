@@ -16,8 +16,10 @@
         filter: saturate(0);
         filter: brightness(90);
         width: 150px;
+        height:auto;
         @media (max-width: 500px) {
             width:100px;
+            height: auto;
         }
         }
     }

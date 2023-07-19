@@ -23,7 +23,7 @@ const Collapse = (props) => {
           className={`arrow-up ${classOpen}`}
         />
       </button>
-      {/*Ajout "classOpen pour animation scss*/}
+      {/*Ajout "classOpen pour animation*/}
       <div className={`content ${classOpen}`}>{props.children}</div>
     </div>
   );

@@ -8,8 +8,7 @@
     z-index: 1;
     filter: brightness(70%);
     @media (max-width: 544px) {
-
-        
+        height: 150px;
     }
 }
 
@@ -34,14 +33,22 @@
     @media (max-width: 1200px) {
         left: 20%;
         inline-size: 65%;
-        font-size: 45px;
+        font-size: 40px;
         top: 25%;
     }
+    @media (max-width: 900px) {
+        left: 22%;
+        inline-size: 65%;
+        font-size: 28px;
+        top: 20%;
+    }
     @media (max-width: 544px) {
-        left: 20%;
+        left: 8%;
+        text-align: left;
         inline-size: 65%;
         font-size: 22px;
-        top: 200px;
+        top: 11%;
+        width: 200px;
     }
 }
 
