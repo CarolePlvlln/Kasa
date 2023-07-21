@@ -21,6 +21,28 @@ function Logement() {
     }
   }
 
+const stars= [];
+for (let i = 0; i< logementFiltre.rating; i++){
+  stars.push(<img src={star_active} key={'starActive-'+i} alt="icon_star_coral" className="iconStarCoral"
+/>)
+}
+for (let i = 0; i< 5-logementFiltre.rating; i++){
+  stars.push(<img src={star_active} key={'starInactive-'+i} alt="icon_star_coral" className="iconStarCoral inactive"
+/>)
+}
+
+  /*const totalFilled = Math.ceil(logementFiltre.rating);
+  const totalStars = 5;
+  [...Array(totalStars).keys()].map((key) => (
+    <img src={star_active}
+    alt="icon_star_coral"
+    className="iconStarCoral"key={key} isFilled={key < totalFilled} {{color: "grey"}}/>
+  ));
+  const avgRating = {logementFiltre.rating};
+
+  const iconComponents = [...new Array(5).fill(0)]
+          .map((_, i) => <IconReviewStar key={i} isFilled={i < avgRating}/>);*/
+
   return (
     <section className="layout" style={logement}>
       <div className="slideShow">
@@ -59,11 +81,7 @@ function Logement() {
             </div>
             <div className="rating">
               {/*Tableau pour afficher le nombre d'étoile en icônes étoiles corail */}
-              {Array(+logementFiltre.rating).fill('').map(x=><img
-                src={star_active}
-                alt="icon_star_coral"
-                className="iconStarCoral"
-              />)}
+              {stars}
             </div>
           </div>
         </div>
