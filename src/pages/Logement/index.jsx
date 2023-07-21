@@ -2,6 +2,7 @@ import React from "react";
 import logement from "./logement.scss";
 import { Carousel, CarouselItem } from "../../components/SlideShow";
 import star_active from "../../assets/icons/star_active.png";
+import { Link } from 'react-router-dom';
 //import star_inactive from '../../assets/icons/star_inactive.png';
 //The useParams hook returns an object of key/value pairs of the dynamic params from the current URL that were matched by the <Route path>. Child routes inherit all params from their parent routes.
 import { useParams } from "react-router-dom";
@@ -11,6 +12,7 @@ import Collapse from "../../components/Collapse";
 function Logement() {
   //récupère ce qu'il y a dans url
   const params = useParams();
+  
   //Déclarer variable logementFiltre
   let logementFiltre;
   //boucle for pour parcourir logement et comparer ID
@@ -19,7 +21,13 @@ function Logement() {
       //logementFiltre=logement avec id=
       logementFiltre = logementsList[i];
     }
-  }
+    /*if (logementFiltre !== params.id)
+    {return(<Link to="/*"></Link>)}*/
+  } 
+
+  
+
+
 
 const stars= [];
 for (let i = 0; i< logementFiltre.rating; i++){
@@ -30,18 +38,6 @@ for (let i = 0; i< 5-logementFiltre.rating; i++){
   stars.push(<img src={star_active} key={'starInactive-'+i} alt="icon_star_coral" className="iconStarCoral inactive"
 />)
 }
-
-  /*const totalFilled = Math.ceil(logementFiltre.rating);
-  const totalStars = 5;
-  [...Array(totalStars).keys()].map((key) => (
-    <img src={star_active}
-    alt="icon_star_coral"
-    className="iconStarCoral"key={key} isFilled={key < totalFilled} {{color: "grey"}}/>
-  ));
-  const avgRating = {logementFiltre.rating};
-
-  const iconComponents = [...new Array(5).fill(0)]
-          .map((_, i) => <IconReviewStar key={i} isFilled={i < avgRating}/>);*/
 
   return (
     <section className="layout" style={logement}>

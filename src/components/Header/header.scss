@@ -34,6 +34,7 @@ img {
         margin-left: 15px;
         margin-top: auto;
     }
+    
 }
 
 a {
@@ -47,6 +48,9 @@ a {
         font-size: 14px;
     }
     &:hover{
+        text-decoration: underline;
+    }
+    &:focus{
         text-decoration: underline;
     }
 }

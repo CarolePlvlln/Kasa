@@ -71,9 +71,9 @@ h1, h2, h3, p{
         align-items: end;
             button{
             @include button;
-            border-radius: 8px;
+            border-radius: 9px;
             width: 90px;
-            height: 20px;
+            height: 21px;
             font-size: 14px;
             font-weight: 300;
             }     
@@ -98,6 +98,7 @@ h1, h2, h3, p{
     display: flex;
     flex-direction: row;
     vertical-align: middle;
+    align-self: end;
 }
         .imgAgent{
             margin-left:5px;
