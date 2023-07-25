@@ -41,6 +41,22 @@
         @media (max-width: 544px) {
             font-size: 22px;
         }
+        @media (max-width: 544px) {
+            span {
+                display: block;
+            }
+            font-size: 27px;
+            width: 100%;
+            text-align: start;
+            margin-left: 3%;
+            top: 52%;
+        }
+        @media (max-width: 490px) {
+        @media (max-width: 329px) {
+            font-size: 23px;
+            width: 100%;
+        }
+        }
     }
 }
 

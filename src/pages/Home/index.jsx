@@ -13,7 +13,7 @@ function Home() {
         alt="img-background-home"
         className="homeLayout__img"
       />
-      <h1>Chez vous, partout et ailleurs</h1>
+      <h1>Chez vous, <span>partout et ailleurs</span></h1>
     </div>
       <div className="homeLayout__logements">
         {logementsList.map(({ id, title, cover }) => (
