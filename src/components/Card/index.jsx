@@ -15,6 +15,7 @@ function Card({ id, title, cover }) {
   return (
     <div style={card} className="logements">
       <p>{title}</p>
+      <div className="img-gradient"></div>
       <img
         src={cover}
         alt=""

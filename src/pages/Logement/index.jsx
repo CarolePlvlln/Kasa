@@ -1,8 +1,8 @@
 import React from "react";
 import logement from "./logement.scss";
-import { Carousel, CarouselItem } from "../../components/SlideShow";
+import Carousel from "../../components/SlideShow";
+import CarouselItem  from "../../components/CarousselItem";
 import star_active from "../../assets/icons/star_active.png";
-import { Link } from 'react-router-dom';
 //import star_inactive from '../../assets/icons/star_inactive.png';
 //The useParams hook returns an object of key/value pairs of the dynamic params from the current URL that were matched by the <Route path>. Child routes inherit all params from their parent routes.
 import { useParams } from "react-router-dom";

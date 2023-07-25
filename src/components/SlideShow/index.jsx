@@ -3,17 +3,7 @@ import "./slideShow.scss";
 import arrow_forward from "../../assets/icons/arrow_forward.png";
 import arrow_back from "../../assets/icons/arrow_back.png";
 
-//Rendra l'élément lui-même. On passe juste la propriété width au composant pour l'instant
-export const CarouselItem = ({ children, width }) => {
-  return (
-    <div className="carousel-item" style={{ width: width }}>
-      {children}
-    </div>
-  );
-};
-
-//Const Carousel
-export const Carousel = ({ children }) => {
+const Carousel = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   /*On implémente pour mettre à jour l'index et controler le carousel. Vérifie si activeIndex est le premier ou dernier item pour ensuite afficher l'image préc ou suiv au clic du bouton.*/
@@ -76,4 +66,4 @@ export const Carousel = ({ children }) => {
   );
 };
 
-
+export default Carousel;

@@ -47,14 +47,28 @@
 
 
 .homeLayout__logements {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: inline-grid;
+    grid-template-columns: 30% 30% 30%;
+    column-gap: 2%;
+    row-gap: 2%;
+    justify-items: center;
+    align-items: start;
     background-color: rgb(241, 241, 241);
-    border-radius: 20px;
+    border-radius: 15px;
     width: 100%;
-    @media (max-width: 544px) {
+    justify-content: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    @media (max-width: 680px) {
+        grid-template-columns: 40% 40% ;
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+    @media (max-width: 400px) {
+        grid-template-columns: 100% ; 
+        row-gap: 30px;
         background-color: transparent;
     }
 }
+
 
