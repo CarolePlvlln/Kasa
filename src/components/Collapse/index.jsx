@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import arrow_down from "../../assets/icons/arrow_down.png";
 import "./Collapse.scss";
 import "../../pages/Logement";
 import "../../pages/Apropos";

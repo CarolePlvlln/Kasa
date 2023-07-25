@@ -2,8 +2,8 @@ import React from "react";
 import logement from "./logement.scss";
 import Carousel from "../../components/SlideShow";
 import CarouselItem  from "../../components/CarousselItem";
-import star_active from "../../assets/icons/star_active.png";
-//import star_inactive from '../../assets/icons/star_inactive.png';
+import star_active from "../../assets/icons/star-active.png";
+import star_inactive from "../../assets/icons/star-inactive.png";
 //The useParams hook returns an object of key/value pairs of the dynamic params from the current URL that were matched by the <Route path>. Child routes inherit all params from their parent routes.
 import { useParams } from "react-router-dom";
 import logementsList from "../../data/logementsList.json";
@@ -25,16 +25,14 @@ function Logement() {
     {return(<Link to="/*"></Link>)}*/
   } 
 
-  
-
-
-
 const stars= [];
 for (let i = 0; i< logementFiltre.rating; i++){
-  stars.push(<i key={'starActive'+i}  className="fa-solid fa-star iconStarCoral"></i>)
+  stars.push(<img src={star_active} key={'starActive-'+i} alt="icon_star_coral" className="iconStarCoral"
+/>)
 }
 for (let i = 0; i< 5-logementFiltre.rating; i++){
-  stars.push(<i key={'starInactive'+i}  className="fa-solid fa-star iconStarGrey"></i>)
+  stars.push(<img src={star_inactive} key={'starInactive-'+i} alt="icon_star_grey" className="iconStargrey"
+/>)
 }
 
   return (
