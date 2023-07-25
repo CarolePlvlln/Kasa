@@ -17,11 +17,8 @@ const Collapse = (props) => {
       {/*On utilise les props pour afficher celui du label dans le fichier index.jsx logement(ou apropos).jsx*/}
       <button onClick={toggle}>
         {props.label}
-        <img
-          src={arrow_down}
-          alt="icon_arrow-down"
-          className={`arrow-up ${classOpen}`}
-        />
+        <i className={`fa-solid fa-chevron-up arrow-up ${classOpen}`}></i>
+        
       </button>
       {/*Ajout "classOpen pour animation*/}
       <div className={`content ${classOpen}`}>{props.children}</div>

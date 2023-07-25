@@ -1,151 +1,181 @@
 $coral: #FF6060;
 
-@mixin titreh3{
+@mixin titreh3 {
     font-size: 16px;
     font-weight: 400;
 }
 
-@mixin button{
+@mixin button {
     background-color: $coral;
-    color:white;
+    color: white;
     border: none;
 }
 
 
-h1, h2, h3, p{
+h1,
+h2,
+h3,
+p {
     color: $coral;
 }
 
 
-.picture{
+.picture {
     width: 92%;
     height: 500px;
     border-radius: 25px;
     object-fit: cover;
-    @media (max-width: 450px){
+
+    @media (max-width: 450px) {
         height: 250px;
     }
-    @media (max-width: 850px){
+
+    @media (max-width: 850px) {
         height: 400px;
     }
 }
 
 
-.logement{
-    margin:4%;
+.logement {
+    margin: 4%;
 }
 
-.logement__titreEtAgent{
-    display:flex;
+.logement__titreEtAgent {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width:100%;
-    @media (max-width: 670px){
+    width: 100%;
+
+    @media (max-width: 670px) {
         flex-direction: column;
     }
-.titreLocalisation{
+
+    .titreLocalisation {
         display: flex;
         flex-direction: column;
-            h2{
-                margin-bottom: 15px;
-                margin-top: 0px;
-                font-size: 30px;;
-                font-weight: 500;
-                text-align: left;
-                @media (max-width: 670px){
-                    font-size: 25px;
-                }
-                }
-                h3{
-                    @include titreh3;
-                    margin-bottom: 20px;
-                    width: 400px;
-                    }
+
+        h2 {
+            margin-bottom: 15px;
+            margin-top: 0px;
+            font-size: 30px;
+            ;
+            font-weight: 500;
+            text-align: left;
+
+            @media (max-width: 670px) {
+                font-size: 25px;
+            }
+        }
+
+        h3 {
+            @include titreh3;
+            margin-bottom: 20px;
+            width: 400px;
+        }
     }
-    .tags{
-        display:flex;
-        flex-direction: row; 
-        gap:10px;
+
+    .tags {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
         margin-bottom: 20px;
         justify-items: left;
         align-items: end;
-            button{
+
+        button {
             @include button;
             border-radius: 9px;
             width: 90px;
             height: 21px;
             font-size: 14px;
             font-weight: 300;
-            }     
+        }
     }
 }
 
-.agentRating{
+.agentRating {
     display: flex;
     flex-direction: column;
     justify-content: right;
     align-content: end;
     justify-content: space-between;
     margin-top: 10px;
-    @media (max-width: 670px){
+
+    @media (max-width: 670px) {
         flex-direction: row;
         margin-bottom: 10px;
         margin-top: 0px;
         flex-direction: row-reverse;
     }
 }
-.agent{
+
+.agent {
     display: flex;
     flex-direction: row;
     vertical-align: middle;
     align-self: end;
 }
-        .imgAgent{
-            margin-left:5px;
-            border-radius: 50%;
-            object-fit: cover;
-            height: 60px;
-            @media (max-width: 670px){
-                height:50px;
-            }
-            }
-            h3{
-                @include titreh3;
-                width: 80px;
-                margin-top: 0px;
-                margin-top: 0px;
-                vertical-align: middle;
-                }
-    
-    .rating{
+
+.imgAgent {
+    margin-left: 5px;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 60px;
+
+    @media (max-width: 670px) {
+        height: 50px;
+    }
+}
+
+h3 {
+    @include titreh3;
+    width: 80px;
+    margin-top: 0px;
+    margin-top: 0px;
+    vertical-align: middle;
+}
+
+.rating {
+    color: $coral;
+    margin-bottom: 18px;
+    display: block;
+    text-align: end;
+    .iconStarGrey {
+        color: rgb(189, 186, 186);
+    }
+
+    .iconStarCoral {
         color: $coral;
-        margin-bottom: 18px;
-            img{
-                margin-left: 6px;
-                height:28px;
-                @media (max-width: 670px){
-                    height:25px;
-                    margin-top: 10%;
-                }
-            }
-                
-            }
+    }
+
+    .fa-solid {
+        margin-left: 6px;
+        height: 28px;
+        @media (max-width: 670px) {
+            height: 25px;
+            margin-top: 10%;
+        }
+    }
+
+}
 
 
-.btnScroll{
+.btnScroll {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width:100%;
-    @media (max-width: 670px){
+    width: 100%;
+
+    @media (max-width: 670px) {
         flex-direction: column;
         row-gap: 20px;
     }
-        .collapse{
-            width: 47%;
-            @media (max-width: 670px){
-                width: 100%;
-            }
-        }
- }
 
+    .collapse {
+        width: 47%;
+
+        @media (max-width: 670px) {
+            width: 100%;
+        }
+    }
+}

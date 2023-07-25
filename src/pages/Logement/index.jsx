@@ -31,12 +31,10 @@ function Logement() {
 
 const stars= [];
 for (let i = 0; i< logementFiltre.rating; i++){
-  stars.push(<img src={star_active} key={'starActive-'+i} alt="icon_star_coral" className="iconStarCoral"
-/>)
+  stars.push(<i key={'starActive'+i}  className="fa-solid fa-star iconStarCoral"></i>)
 }
 for (let i = 0; i< 5-logementFiltre.rating; i++){
-  stars.push(<img src={star_active} key={'starInactive-'+i} alt="icon_star_coral" className="iconStarCoral inactive"
-/>)
+  stars.push(<i key={'starInactive'+i}  className="fa-solid fa-star iconStarGrey"></i>)
 }
 
   return (
