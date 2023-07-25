@@ -52,8 +52,7 @@ p {
 
     .titreLocalisation {
         display: flex;
-        flex-direction: column;
-
+        flex-direction: column;  
         h2 {
             margin-bottom: 15px;
             margin-top: 0px;
@@ -61,11 +60,12 @@ p {
             ;
             font-weight: 500;
             text-align: left;
-
+            
+            }
             @media (max-width: 670px) {
                 font-size: 25px;
             }
-        }
+        
 
         h3 {
             @include titreh3;
@@ -100,12 +100,16 @@ p {
     align-content: end;
     justify-content: space-between;
     margin-top: 10px;
+    @media (max-width: 1000px) {
+        width: 40%;
+    }
 
     @media (max-width: 670px) {
         flex-direction: row;
         margin-bottom: 10px;
         margin-top: 0px;
         flex-direction: row-reverse;
+        width: 100%;
         
     }
 }
@@ -144,7 +148,7 @@ h3 {
     text-align: end;
     @media (max-width: 670px) {
         margin-bottom: 0px;
-        display: flex;
+        display: inline-block;
     }
     .iconStarGrey {
         color: rgb(189, 186, 186);
@@ -154,11 +158,14 @@ h3 {
         color: $coral;
     }
 
-    .img {
-        margin-left: 6px;
-        height: 28px;
+    .star {
+        margin-left: 14px;
+        height: 22px;
+        @media (max-width: 1000px) {
+            height: 18px;
+        }
         @media (max-width: 670px) {
-            height: 25px;
+            height: 18px;
             margin-top: 10%;
         }
     }
