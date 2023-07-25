@@ -12,7 +12,7 @@
 .homeLayout{
     width: 92%;
     margin: auto;
-}
+    }
 
 .img_titre{
     width: 100%;
@@ -64,9 +64,16 @@
         column-gap: 30px;
         row-gap: 30px;
     }
-    @media (max-width: 400px) {
-        grid-template-columns: 100% ; 
-        row-gap: 30px;
+    @media (max-width: 550px) {
+        padding-top: 2%;
+        padding-bottom: 2%;
+        row-gap: 0%;
+    }
+    @media (max-width: 490px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
         background-color: transparent;
     }
 }

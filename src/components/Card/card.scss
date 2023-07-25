@@ -2,9 +2,10 @@
 .logements {
     position: relative;
     justify-items: start;
-        @media (max-width: 544px) {
-            margin: 2%;
-        }
+    @media (max-width: 490px) {
+        width: 100%;
+        height: auto;
+    }   
 }
 
 .logements p {
@@ -37,9 +38,12 @@
         left: 10px;
         font-size: 14px;
     }
-
-    @media (max-width: 544px) {
+    @media (max-width: 550px) {
+        top: 145px;
+    }
+    @media (max-width: 490px) {
         top: 80%;
+        font-size: 17px;
     }
 
 }
@@ -54,7 +58,38 @@
     border-radius: 10px;
     background: linear-gradient(to top,rgb(43, 43, 43), transparent);
     border-radius: 10px;
+    @media (max-width: 1350px) {
+        width: 280px;
+        height: 100px;
+        top: 180px;
+    }
+    @media (max-width: 1050px) {
+        width: 230px;
+        height: 90px;
+        top: 150px;
+    }
+    @media (max-width: 850px) {
+        width: 180px;
+        height: 80px;
+        top: 110px;
+    }
+    @media (max-width: 680px) {
+        width: 200px;
+        height: 80px;
+        top: 130px;
+    }
+    @media (max-width: 550px) {
+        width: 200px;
+        height: 80px;
+        top: 130px;
+    }
+    
+    @media (max-width: 490px) {
+        width: 100%;
+        height: 150px;
+        top: 210px;
         
+    }
     }
 
 .logements img {
@@ -82,8 +117,8 @@
         width: 200px;
         height: 200px;
     }
-    @media (max-width: 400px) {
-        width: 350px;
+    @media (max-width: 490px) {
+        width: 100%;
         height: 350px;
         
     }
