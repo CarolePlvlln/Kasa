@@ -44,7 +44,6 @@ $coral: #FF6060;
         background-color: $coral;
         color: white;
         border: none;
-        border-radius: 5px;
         font-size: 18px;
         padding: 10px;
         justify-content: space-between;
@@ -68,5 +67,10 @@ $coral: #FF6060;
         &:hover {
             cursor: pointer;
         }
+    }
+
+    .butonIcon button{
+        border-radius: 3px;
+
     }
 }

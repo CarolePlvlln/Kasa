@@ -37,7 +37,10 @@ p {
 
 
 .logement {
-    margin: 4%;
+    margin-right: 4%;
+    margin-left: 4%;
+    margin-bottom: 4%;
+
 }
 
 .logement__titreEtAgent {
@@ -189,6 +192,9 @@ h3 {
 
         @media (max-width: 670px) {
             width: 100%;
+        }
+        .buttonIcon button{
+            border-radius: 10px;
         }
     }
 }

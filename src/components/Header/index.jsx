@@ -10,7 +10,7 @@ function Header() {
       <img src={logo} alt="logo-kasa" className="nav-container__logo" />
       <ul>
         <li>
-          <Link to="/">Accueil</Link>
+          <Link to="/" type="button" autofocus>Accueil</Link>
         </li>
         <li>
           <Link to="/Apropos">A Propos</Link>
