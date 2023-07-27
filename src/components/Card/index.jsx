@@ -8,9 +8,6 @@ useNavigation() renvoie la prop de navigation de l'écran dans lequel il se trou
 
 function Card({ id, title, cover }) {
   const navigate = useNavigate();
-  /*if(some condition) {
-    navigate("/*")
-}*/
  
   return (
     <div style={card} className="logements">

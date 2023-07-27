@@ -5,25 +5,29 @@ import CarouselItem  from "../../components/CarousselItem";
 import star_active from "../../assets/icons/star-active.png";
 import star_inactive from "../../assets/icons/star-inactive.png";
 //The useParams hook returns an object of key/value pairs of the dynamic params from the current URL that were matched by the <Route path>. Child routes inherit all params from their parent routes.
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import logementsList from "../../data/logementsList.json";
 import Collapse from "../../components/Collapse";
 
 function Logement() {
   //récupère ce qu'il y a dans url
   const params = useParams();
-  
+  const navigate = useNavigate();
   //Déclarer variable logementFiltre
-  let logementFiltre;
-  //boucle for pour parcourir logement et comparer ID
-  for (let i = 0; i < logementsList.length; i++) {
-    if (logementsList[i].id === params.id) {
-      //logementFiltre=logement avec id=
-      logementFiltre = logementsList[i];
-    }
-    /*if (logementFiltre !== params.id)
-    {return(<Link to="/*"></Link>)}*/
-  } 
+let logementFiltre;
+
+//boucle for pour parcourir logement et comparer ID
+for (let i = 0; i < logementsList.length; i++) {
+  if (logementsList[i].id === params.id) {
+    //logementFiltre=logement avec id=
+    logementFiltre = logementsList[i];
+  }
+//Pas de logement trouvé
+}
+    if(!logementFiltre) {
+    return navigate("/Error")
+  }
+  
 
 const stars= [];
 for (let i = 0; i< logementFiltre.rating; i++){
