@@ -14,7 +14,7 @@ $coral: #FF6060;
         height: 30px;
         margin-top: 10px;
     }
-    
+
     @media (max-width: 285px) {
         height: 20px;
         margin-top: 18px;
@@ -28,6 +28,7 @@ $coral: #FF6060;
     justify-content: space-between;
     margin-bottom: 40px;
     margin: 4%;
+
     @media (max-width: 285px) {
         margin-bottom: 0px;
     }
@@ -73,8 +74,8 @@ a {
     &:hover {
         text-decoration: underline;
     }
-
-    &:focus {
-        text-decoration: underline;
-    }
+    &.activeLink {
+    text-decoration: underline;
 }
+}
+

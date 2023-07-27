@@ -37,7 +37,7 @@ const Carousel = ({ children }) => {
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
         {React.Children.map(children, (child, index) => {
-          return React.cloneElement(child, { width: "100%" });
+          return React.cloneElement(child);
         })}
       </div>
       {/*Implémenter prev et next button */}

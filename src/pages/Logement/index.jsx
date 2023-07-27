@@ -5,14 +5,13 @@ import CarouselItem  from "../../components/CarousselItem";
 import star_active from "../../assets/icons/star-active.png";
 import star_inactive from "../../assets/icons/star-inactive.png";
 //The useParams hook returns an object of key/value pairs of the dynamic params from the current URL that were matched by the <Route path>. Child routes inherit all params from their parent routes.
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import logementsList from "../../data/logementsList.json";
 import Collapse from "../../components/Collapse";
 
 function Logement() {
   //récupère ce qu'il y a dans url
   const params = useParams();
-  const navigate = useNavigate();
   //Déclarer variable logementFiltre
 let logementFiltre;
 
@@ -25,7 +24,7 @@ for (let i = 0; i < logementsList.length; i++) {
 //Pas de logement trouvé
 }
     if(!logementFiltre) {
-    return navigate("/*")
+      return <Navigate to="/notFound" />;
   }
   
 
