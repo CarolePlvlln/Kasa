@@ -25,7 +25,7 @@ for (let i = 0; i < logementsList.length; i++) {
 //Pas de logement trouvé
 }
     if(!logementFiltre) {
-    return navigate("/Error")
+    return navigate("/*")
   }
   
 
