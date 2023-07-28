@@ -2,6 +2,10 @@
     position: relative;
     width: 30%;
     margin-bottom: 50px;
+    @media (max-width: 680px) {
+        width: 45%;
+        margin-bottom: 30px;
+    }
     @media (max-width: 490px) {
         width: 100%;
         height: auto;
@@ -12,40 +16,36 @@
     position: absolute;
     z-index: 3;
     font-size: 18px;
-    bottom: 20px;
+    bottom: 0px;
     left: 15px;
     width: 70%;
     color: white;
 
     @media (max-width: 1350px) {
-        top: 210px;
         font-size: 16px;
     }
 
     @media (max-width: 1050px) {
-        top: 175px;
         left: 10px;
         width: 90%;
     }
 
     @media (max-width: 850px) {
-        top: 130px;
         left: 10px;
         font-size: 14px;
     }
 
     @media (max-width: 680px) {
-        top: 150px;
         left: 10px;
-        font-size: 14px;
+        font-size: 13px;
     }
 
     @media (max-width: 550px) {
-        top: 145px;
+        
     }
 
     @media (max-width: 490px) {
-        top: 80%;
+        
         font-size: 17px;
     }
 
@@ -98,4 +98,5 @@
     &:hover {
         cursor: pointer;
     }
+
 }
