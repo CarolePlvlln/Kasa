@@ -89,7 +89,9 @@ for (let i = 0; i< 5-logementFiltre.rating; i++){
             </div>
             <div className="collapse">
               <Collapse label="Equipements">
-                <p>{logementFiltre.equipments}</p>
+              {logementFiltre.equipments.map((equipment) => {
+                return <ul className="listeEquipements"><li key={equipment}>{equipment}</li></ul>
+              })}
               </Collapse>
             </div>
           </div>
