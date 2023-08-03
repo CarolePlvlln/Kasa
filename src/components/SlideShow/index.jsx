@@ -6,8 +6,7 @@ import arrow_back from "../../assets/icons/arrow_back.png";
 const Carousel = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0);
    
-  /*On implémente pour mettre à jour l'index et controler le carousel. Vérifie si activeIndex est le premier ou dernier item pour ensuite afficher l'image préc ou suiv au clic du bouton.*/
-  const updateIndex = (newIndex) => {
+  /*On implémente pour mettre à jour l'index et controler le carousel. Vérifie si activeIndex est le premier ou dernier item pour ensuite afficher l'image préc ou suiv au clic du bouton.*/  const updateIndex = (newIndex) => {
     if (newIndex < 0) {
       newIndex = 0;
     } else if (newIndex >= React.Children.count(children)) {
@@ -65,7 +64,7 @@ const Carousel = ({ children }) => {
         
       </div>
       <div className={`imageIndex${(children.length===1) ? 'Inactive':''}`}>
-      <h5>{activeIndex}/{children.length}</h5>
+      <h5>{activeIndex+1}/{children.length}</h5>
       </div>
     </div>
   );
