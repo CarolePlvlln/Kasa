@@ -5,7 +5,7 @@
     position: relative;
 }
 
-.inner{
+.inner {
     white-space: nowrap;
     transition: transfrom 0.3;
     position: relative;
@@ -13,8 +13,7 @@
     //transition-duration: 1s; 
     //transition-timing-function: ease-in; 
     //transition-delay: .4s ;
-    transition: 1s ease-in .4s 
-    
+    transition: 1s ease-in .4s
 }
 
 .carousel-item {
@@ -23,59 +22,83 @@
     align-items: center;
     justify-content: center;
     height: 600px;
-    width:100%; 
-    @media (max-width: 900px){
+    width: 100%;
+
+    @media (max-width: 900px) {
         height: 400px;
     }
-    @media (max-width: 490px){
+
+    @media (max-width: 490px) {
         height: 300px;
     }
+
     img {
         height: 500px;
         margin-top: 0px;
 
-        @media (max-width: 900px){
+        @media (max-width: 900px) {
             height: 400px;
         }
-        @media (max-width: 490px){
+
+        @media (max-width: 490px) {
             height: 300px;
         }
     }
 }
 
 .indicators {
-    width:100%;
-    display: flex;  
-    flex-direction: row;   
+    width: 100%;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     position: absolute;
     z-index: 2;
     top: 52%;
     //toujours centrer
     transform: translateY(-50%);
-   
-    
+
+
     button {
         background-color: transparent;
-        border: none; 
+        border: none;
         cursor: pointer;
-        margin:0px;
-        .icon{
-            height:100px;
-            @media (max-width: 900px){
-                height:70px;
+        margin: 0px;
+
+        .icon {
+            height: 100px;
+
+            @media (max-width: 900px) {
+                height: 70px;
             }
-            @media (max-width: 490px){
-                height:55px;
+
+            @media (max-width: 490px) {
+                height: 55px;
             }
         }
 
     }
+
     .icon {
         margin-top: 0px;
     }
-    .btnIconBack{
+
+    .btnIconBack {
         margin-left: 0px;
     }
+}
 
+.indicatorsInactive {
+    display: none;
+}
+
+
+.imageIndex {
+    left: 50%;
+    position: absolute;
+    z-index: 2;
+    top: 80%;
+}
+
+.imageIndexInactive {
+    display: none;
 }
