@@ -22,7 +22,7 @@ const Carousel = ({ children }) => {
     let timer = setInterval(() => {
       clearInterval();
       //loop
-        setActiveIndex((activeIndex)=>(activeIndex + 1)% children.length);
+      setActiveIndex((activeIndex)=>(activeIndex + 1)% children.length);
     }, 4000);
     return () => clearInterval(timer);
   }, [activeIndex]);
@@ -46,7 +46,7 @@ const Carousel = ({ children }) => {
           <button
             className="btnBack"
             onClick={() => {
-              updateIndex(activeIndex - 1);
+              setActiveIndex((activeIndex - 1)<0 ? children.length-1 : activeIndex-1);
             }}
           >
             <img src={arrow_back} alt="icon-back icon" className="icon" />
@@ -56,7 +56,7 @@ const Carousel = ({ children }) => {
         <button
           className="btnForward"
           onClick={() => {
-            updateIndex(activeIndex + 1);
+            setActiveIndex((activeIndex + 1)>=children.length ? 0 : activeIndex+1);
           }}
         >
           <img src={arrow_forward} alt="icon-forward icon" className="icon" />

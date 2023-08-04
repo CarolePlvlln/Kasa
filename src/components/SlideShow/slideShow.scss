@@ -13,8 +13,10 @@
     //transition-duration: 1s; 
     //transition-timing-function: ease-in; 
     //transition-delay: .4s ;
-    transition: 1s ease-in .4s
+    transition: 1s ease-in .4s;
 }
+
+
 
 .carousel-item {
     position: relative;
@@ -56,6 +58,7 @@
     top: 52%;
     //toujours centrer
     transform: translateY(-50%);
+   
 
 
     button {
